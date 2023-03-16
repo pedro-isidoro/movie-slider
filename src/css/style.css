@@ -1,0 +1,139 @@
+body{
+    display: grid;
+    grid: 'cabecalho'
+          'painel';
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: rgb(187, 7, 7);
+    height: 100vh;
+}
+
+/* HEADER */
+.header{
+    grid-area: cabecalho;
+
+    margin: 2rem 0;
+}
+
+.header .general-title{
+    font-size: 3.5rem;
+}
+
+/* PANEL */
+.panel{
+    grid-area: painel;
+    display: grid;
+    grid: 'star-wars'
+          'high-school-musical-slider';
+    
+    display: flex;
+    flex-direction: column;
+
+    padding: 1.5rem 0;
+}
+
+/* STAR WARS */
+.star-wars-slider{
+    background: url(../images/background-general/death-star.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    grid-area: star-wars;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: relative;
+    width: 100vw;
+    height: 36rem;
+}
+
+.star-wars-list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.star-wars-list .slide-sw{
+    position: absolute;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+    left: 35%;
+}
+
+.star-wars-list .slide-sw.show{
+    opacity: 1;
+}
+
+/* STARS WARS's IMAGE */
+.star-wars-list .slide-sw .star-wars-image{
+    width: 22rem;
+    height: 32rem;
+}
+
+/* HIGH SCHOOL MUSICAL */
+.high-school-musical-slider{
+    background: url(../images/background-general/high-school-musical.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    grid-area: high-school-musical;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: relative;
+    width: 100vw;
+    height: 32rem;
+}
+
+.high-school-musical-list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.high-school-musical-list .slide-hsm{
+    position: absolute;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+    left: 35%;
+}
+
+.high-school-musical-list .show{
+    opacity: 1;
+}
+
+/* HIGH SCHOOL MUSICAL's IMAGE */
+.high-school-musical-list .slide-hsm .high-school-musical-image{
+    width: 22rem;
+    height: 28rem;
+}
+
+/* Arrows */
+.back-arrow, .forward-arrow{
+    position: absolute;
+    z-index: 1;
+}
+
+.arrow-image{
+    width: 4rem;
+    height: 4rem;
+}
+
+.back-arrow{
+    left: 4%;
+    transform: rotateY(180deg);
+}
+
+.forward-arrow{
+    right: 4%;
+}
+
+.opacity{
+    opacity: 0.6;
+    cursor: default;
+}
