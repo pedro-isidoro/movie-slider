@@ -7,11 +7,12 @@ body, .panel{
 }
 
 /* flex-direction: row */
-.star-wars-list{
+.star-wars-list, .high-school-musical-list{
     display: flex;
     align-items: center;
 }
 
+/* General */
 body{
     background-color: rgb(187, 7, 7);
     height: 100vh;
@@ -59,7 +60,7 @@ body{
 }
 
 /* STARS WARS's IMAGE */
-.star-wars-list .slide-sw .star-wars-image{
+.slide-sw .star-wars-image{
     width: 22rem;
     height: 32rem;
 }
@@ -79,11 +80,6 @@ body{
     height: 32rem;
 }
 
-.high-school-musical-list{
-    display: flex;
-    align-items: center;
-}
-
 .high-school-musical-list .slide-hsm{
     position: absolute;
     opacity: 0;
@@ -96,7 +92,7 @@ body{
 }
 
 /* HIGH SCHOOL MUSICAL's IMAGE */
-.high-school-musical-list .slide-hsm .high-school-musical-image{
+.slide-hsm .high-school-musical-image{
     width: 22rem;
     height: 28rem;
 }
