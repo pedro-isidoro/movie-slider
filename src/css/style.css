@@ -1,10 +1,10 @@
 /* flex-direction: column */
-body, .panel{
+/* body, .panel{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
+} */
 
 /* flex-direction: row */
 .star-wars-list, .high-school-musical-list{
@@ -16,25 +16,35 @@ body, .panel{
 body{
     background-color: rgb(187, 7, 7);
     height: 100vh;
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 /* HEADER */
 .header{
-    margin: 2rem 0;
+    margin: 2rem 0 8rem 0;
 }
 
 .header .general-title{
-    font-size: 3.5rem;
+    font-size: 4rem;
 }
 
 /* PANEL */
 .panel{    
     padding: 1.5rem 0;
     width: 100vw;
+
+    display: grid;
+    place-items: center;
+    grid: 'star-wars high-school-musical';
 }
 
 /* STAR WARS */
 .star-wars-slider{
+    grid-area: star-wars;
     background: url(../images/background-general/death-star.jpg) no-repeat;
     background-size: cover;
     background-position: center;
@@ -53,6 +63,7 @@ body{
 
 /* HIGH SCHOOL MUSICAL */
 .high-school-musical-slider{
+    grid-area: high-school-musical;
     background: url(../images/background-general/high-school-musical.jpg) no-repeat;
     background-size: cover;
     background-position: center;
@@ -72,11 +83,11 @@ body{
 /* Movies-sliders */
 .star-wars-slider, .high-school-musical-slider{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 
     position: relative;
-    width: 90%;
+    width: 65%;
     height: 36rem;
 }
 
