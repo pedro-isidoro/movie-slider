@@ -41,7 +41,6 @@ body{
 
 .star-wars-list{
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 
@@ -49,7 +48,7 @@ body{
     position: absolute;
     opacity: 0;
     transition: 0.3s ease-in-out;
-    left: 55%;
+    /* left: 55%; */
 }
 
 .star-wars-list .slide-sw.show{
@@ -79,7 +78,6 @@ body{
 
 .high-school-musical-list{
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 
@@ -87,7 +85,7 @@ body{
     position: absolute;
     opacity: 0;
     transition: 0.3s ease-in-out;
-    left: 55%;
+    /* left: 55%; */
 }
 
 .high-school-musical-list .show{
