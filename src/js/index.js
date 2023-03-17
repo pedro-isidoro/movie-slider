@@ -1,11 +1,12 @@
-const imagens = document.querySelectorAll(".slide-sw");
+const imagensSW = document.querySelectorAll(".slide-sw");
+const imagensHSM = document.querySelectorAll(".slide-hsm");
 const setaVoltar = document.getElementById("back-arrow");
 const setaAvancar = document.getElementById("forward-arrow");
 
 let imagemAtual = 0;
 
 setaAvancar.addEventListener("click", function(){
-    if(imagemAtual === imagens.length - 1){
+    if(imagemAtual === imagensSW.length - 1){
         return;
     };
 
@@ -34,7 +35,7 @@ function esconderImagemAberta(){
 };
 
 function mostrarImagem(){
-    imagens[imagemAtual].classList.add("show");
+    imagensSW[imagemAtual].classList.add("show");
 };
 
 function mostrarOuEsconderSetas(){
@@ -45,7 +46,7 @@ function mostrarOuEsconderSetas(){
         setaVoltar.classList.add("opacity");
     }
 
-    const EhAUltimaImagem = imagemAtual !== 0 && imagemAtual === imagens.length - 1;
+    const EhAUltimaImagem = imagemAtual !== 0 && imagemAtual === imagensSW.length - 1;
     if(EhAUltimaImagem){
         setaAvancar.classList.add("opacity");
     }else{
