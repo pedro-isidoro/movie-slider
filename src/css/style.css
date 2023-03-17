@@ -1,17 +1,3 @@
-/* flex-direction: column */
-/* body, .panel{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-} */
-
-/* flex-direction: row */
-.star-wars-list, .high-school-musical-list{
-    display: flex;
-    align-items: center;
-}
-
 /* General */
 body{
     background-color: rgb(187, 7, 7);
@@ -78,12 +64,15 @@ body{
     opacity: 1;
 }
 
-/* Movies-sliders */
-.star-wars-slider, .high-school-musical-slider{
+/* flex-direction: row */
+.star-wars-list, .high-school-musical-list, .star-wars-slider, .high-school-musical-slider{
     display: flex;
     justify-content: center;
     align-items: center;
+}
 
+/* Movies-sliders */
+.star-wars-slider, .high-school-musical-slider{
     position: relative;
     width: 100%;
     height: 36rem;
