@@ -65,9 +65,9 @@ setaAvancarHSM.addEventListener("click", function(){
 
     imagemAtualHSM ++;
 
-    esconderImagemAberta();
-    mostrarImagem();
-    mostrarOuEsconderSetas();
+    esconderImagemAbertaHSM();
+    mostrarImagemHSM();
+    mostrarOuEsconderSetasHSM();
 });
 
 setaVoltarHSM.addEventListener("click", function(){
@@ -77,32 +77,32 @@ setaVoltarHSM.addEventListener("click", function(){
 
     imagemAtualHSM --;
 
-    esconderImagemAberta();
-    mostrarImagem();
-    mostrarOuEsconderSetas();
+    esconderImagemAbertaHSM();
+    mostrarImagemHSM();
+    mostrarOuEsconderSetasHSM();
 });
 
-function esconderImagemAberta(){
-    const imagemAberta = document.querySelector(".show-1");
-    imagemAberta.classList.remove("show-1")
+function esconderImagemAbertaHSM(){
+    const imagemAbertaHSM = document.querySelector(".show-1");
+    imagemAbertaHSM.classList.remove("show-1")
 };
 
-function mostrarImagem(){
+function mostrarImagemHSM(){
     imagensHSM[imagemAtualHSM].classList.add("show-1");
 };
 
-function mostrarOuEsconderSetas(){
-    const naoEhAPrimeiraImagem = imagemAtualHSM !== 0;
-    if(naoEhAPrimeiraImagem){
-        setaVoltarHSM.classList.remove("opacity-1");
+function mostrarOuEsconderSetasHSM(){
+    const naoEhAPrimeiraImagemHSM = imagemAtualHSM !== 0;
+    if(naoEhAPrimeiraImagemHSM){
+        setaVoltarHSM.classList.remove("opacity");
     }else{
-        setaVoltarHSM.classList.add("opacity-1");
+        setaVoltarHSM.classList.add("opacity");
     }
 
-    const EhAUltimaImagem = imagemAtualHSM !== 0 && imagemAtualHSM === imagensHSM.length - 1;
-    if(EhAUltimaImagem){
-        setaAvancarHSM.classList.add("opacity-1");
+    const EhAUltimaImagemHSM = imagemAtualHSM !== 0 && imagemAtualHSM === imagensHSM.length - 1;
+    if(EhAUltimaImagemHSM){
+        setaAvancarHSM.classList.add("opacity");
     }else{
-        setaAvancarHSM.classList.remove("opacity-1");
+        setaAvancarHSM.classList.remove("opacity");
     }
 };
