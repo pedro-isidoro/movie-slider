@@ -15,6 +15,7 @@ body{
 }
 
 .header .general-title{
+    color: #fff;
     font-size: 4rem;
 }
 
@@ -63,21 +64,22 @@ body{
 .high-school-musical-list .show-1{
     opacity: 1;
 }
+
 /* Hobbit */
 .hobbit-slider{
-    grid-area: high-school-musical;
+    grid-area: hobbit;
     background: url(../images/background-general/hobbit.jpg) no-repeat;
     background-size: cover;
     background-position: center;
 }
 
-.high-school-musical-list .slide-hsm{
+.hobbit-list .slide-h{
     position: absolute;
     opacity: 0;
     transition: 0.3s ease-in-out;
 }
 
-.high-school-musical-list .show-1{
+.hobbit-list .show-2{
     opacity: 1;
 }
 
@@ -121,7 +123,7 @@ body{
     right: 4%;
 }
 
-.opacity, .opacity-1{
+.opacity, .opacity-1, .opacity-2{
     opacity: 0.6;
     cursor: default;
 }
