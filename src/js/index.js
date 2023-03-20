@@ -2,6 +2,7 @@
 const imagensSW = document.querySelectorAll(".slide-sw");
 const imagensHSM = document.querySelectorAll(".slide-hsm");
 const imagensH = document.querySelectorAll(".slide-h");
+const imagensT = document.querySelectorAll(".slide-t");
 
 // Arrows
 const setaVoltar = document.getElementById("back-arrow");
@@ -10,11 +11,14 @@ const setaVoltarHSM = document.getElementById("back-arrow-1");
 const setaAvancarHSM = document.getElementById("forward-arrow-1");
 const setaVoltarH = document.getElementById("back-arrow-2");
 const setaAvancarH = document.getElementById("forward-arrow-2");
+const setaVoltarT = document.getElementById("back-arrow-3");
+const setaAvancarT = document.getElementById("forward-arrow-3");
 
 // images
 let imagemAtualSW = 0;
 let imagemAtualHSM = 0;
 let imagemAtualH = 0;
+let imagemAtualT = 0;
 
 // STAR WARS
 setaAvancar.addEventListener("click", function(){
@@ -163,5 +167,55 @@ function mostrarOuEsconderSetasH(){
         setaAvancarH.classList.add("opacity-2");
     }else{
         setaAvancarH.classList.remove("opacity-2");
+    }
+};
+
+// TRANSFORMERS
+setaAvancarT.addEventListener("click", function(){
+    if(imagemAtualT === imagensT.length - 1){
+        return;
+    };
+
+    imagemAtualT ++;
+
+    esconderImagemAbertaT();
+    mostrarImagemT();
+    mostrarOuEsconderSetasT();
+});
+
+setaVoltarT.addEventListener("click", function(){
+    if(imagemAtualT === 0){
+        return;
+    };
+
+    imagemAtualT --;
+
+    esconderImagemAbertaT();
+    mostrarImagemT();
+    mostrarOuEsconderSetasT();
+});
+
+function esconderImagemAbertaT(){
+    const imagemAbertaT = document.querySelector(".show-3");
+    imagemAbertaT.classList.remove("show-3")
+};
+
+function mostrarImagemT(){
+    imagensT[imagemAtualT].classList.add("show-3");
+};
+
+function mostrarOuEsconderSetasT(){
+    const naoEhAPrimeiraImagemT = imagemAtualT !== 0;
+    if(naoEhAPrimeiraImagemT){
+        setaVoltarT.classList.remove("opacity-3");
+    }else{
+        setaVoltarT.classList.add("opacity-3");
+    }
+
+    const EhAUltimaImagemT = imagemAtualT !== 0 && imagemAtualT === imagensT.length - 1;
+    if(EhAUltimaImagemT){
+        setaAvancarT.classList.add("opacity-3");
+    }else{
+        setaAvancarT.classList.remove("opacity-3");
     }
 };
