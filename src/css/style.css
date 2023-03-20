@@ -22,7 +22,8 @@ body{
 /* PANEL */
 .panel{    
     padding: 1.5rem 0;
-    width: 100vw;
+    width: 98vw;
+    gap: 1.5rem;
 
     display: grid;
     place-items: center;
@@ -35,6 +36,7 @@ body{
     background: url(../images/background-general/death-star.jpg) no-repeat;
     background-size: cover;
     background-position: center;
+    border: 0.05rem solid #fff;
 }
 
 .star-wars-list .slide-sw{
@@ -53,6 +55,7 @@ body{
     background: url(../images/background-general/high-school-musical.jpg) no-repeat;
     background-size: cover;
     background-position: center;
+    border: 0.05rem solid #fff;
 }
 
 .high-school-musical-list .slide-hsm{
@@ -71,6 +74,7 @@ body{
     background: url(../images/background-general/hobbit.jpg) no-repeat;
     background-size: cover;
     background-position: center;
+    border: 0.05rem solid #fff;
 }
 
 .hobbit-list .slide-h{
