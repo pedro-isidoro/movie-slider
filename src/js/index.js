@@ -83,26 +83,26 @@ setaVoltarHSM.addEventListener("click", function(){
 });
 
 function esconderImagemAberta(){
-    const imagemAberta = document.querySelector(".show");
-    imagemAberta.classList.remove("show")
+    const imagemAberta = document.querySelector(".show-1");
+    imagemAberta.classList.remove("show-1")
 };
 
 function mostrarImagem(){
-    imagensHSM[imagemAtualHSM].classList.add("show");
+    imagensHSM[imagemAtualHSM].classList.add("show-1");
 };
 
 function mostrarOuEsconderSetas(){
     const naoEhAPrimeiraImagem = imagemAtualHSM !== 0;
     if(naoEhAPrimeiraImagem){
-        setaVoltarHSM.classList.remove("opacity");
+        setaVoltarHSM.classList.remove("opacity-1");
     }else{
-        setaVoltarHSM.classList.add("opacity");
+        setaVoltarHSM.classList.add("opacity-1");
     }
 
     const EhAUltimaImagem = imagemAtualHSM !== 0 && imagemAtualHSM === imagensHSM.length - 1;
     if(EhAUltimaImagem){
-        setaAvancarHSM.classList.add("opacity");
+        setaAvancarHSM.classList.add("opacity-1");
     }else{
-        setaAvancarHSM.classList.remove("opacity");
+        setaAvancarHSM.classList.remove("opacity-1");
     }
 };
