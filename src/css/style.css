@@ -64,7 +64,22 @@ body{
     opacity: 1;
 }
 /* Hobbit */
+.hobbit-slider{
+    grid-area: high-school-musical;
+    background: url(../images/background-general/hobbit.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
 
+.high-school-musical-list .slide-hsm{
+    position: absolute;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.high-school-musical-list .show-1{
+    opacity: 1;
+}
 
 /* flex-direction: row */
 .star-wars-list, .high-school-musical-list, .hobbit-list, .star-wars-slider, .high-school-musical-slider, .hobbit-slider{
