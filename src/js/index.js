@@ -1,4 +1,4 @@
-// Slides
+/*// Slides
 const imagensSW = document.querySelectorAll(".slide-sw");
 const imagensHSM = document.querySelectorAll(".slide-hsm");
 const imagensH = document.querySelectorAll(".slide-h");
@@ -218,4 +218,13 @@ function mostrarOuEsconderSetasT(){
     }else{
         setaAvancarT.classList.remove("opacity-3");
     }
-};
+};*/
+
+const imagensSW = document.querySelectorAll(".slide-sw");
+const imagensHSM = document.querySelectorAll(".slide-hsm");
+const imagensH = document.querySelectorAll(".slide-h");
+const imagensT = document.querySelectorAll(".slide-t");
+
+const backArrow = document.querySelectorAll(".back-arrow");
+const forwardArrow = document.querySelectorAll(".forward-arrow");
+
