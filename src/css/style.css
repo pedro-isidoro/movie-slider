@@ -2,15 +2,16 @@
 body{
     background-color: black;
     height: 100vh;
-    display: flex;
-
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    
+    display: grid;
+    grid: 'cabecalho'
+          'painel';
+    place-items: center;
 }
 
 /* HEADER */
 .header{
+    grid-area: cabecalho;
     margin: 2rem 0;
 }
 
@@ -22,13 +23,14 @@ body{
 /* PANEL */
 .panel{    
     padding: 1.5rem 0;
-    width: 98vw;
+    width: 90vw;
     gap: 1.5rem;
 
+    grid-area: painel;
     display: grid;
     place-items: center;
-    grid: 'star-wars high-school-musical' 
-          'hobbit transformers';
+    grid: 'star-wars high-school-musical hobbit' 
+          'transformers . .';
 }
 
 /* STAR WARS */
@@ -110,15 +112,15 @@ body{
 /* Movies-sliders */
 .star-wars-slider, .high-school-musical-slider, .hobbit-slider, .transformers-slider{
     position: relative;
-    width: 100%;
-    height: 36rem;
+    min-width: 40rem;
+    height: 26rem;
 }
 
 /* IMAGES */
 .slide-sw .star-wars-image, .slide-hsm .high-school-musical-image, 
 .slide-h .hobbit-image, .slide-t .transformers-image{
-    width: 22rem;
-    height: 32rem;
+    width: 16rem;
+    height: 22rem;
 }
 
 /* OPACITY: 1 */
