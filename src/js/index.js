@@ -1,66 +1,72 @@
-const setaVoltarsw = document.getElementById("back-arrow");
-const setaVoltarhsm = document.getElementById("back-arrow-1");
-
 const setaAvancarsw = document.getElementById("forward-arrow");
 const setaAvancarhsm = document.getElementById("forward-arrow-1");
+
+const setaVoltarsw = document.getElementById("back-arrow");
+const setaVoltarhsm = document.getElementById("back-arrow-1");
 
 const imagensSW = document.querySelectorAll(".slide-sw");
 const imagensHSM = document.querySelectorAll(".slide-hsm");
 
+const mostrarSW = document.querrySelector(".show");
+const mostrarHSM = document.querrySelector(".show-1");
+
+const opacidadeSW = document.querySelector(".opacity");
+const opacidadeHSM = document.querySelector(".opacity-1");
+
 let imagemAtual = 0;
 
-setaAvancarsw.addEventListener("click", avancar(imagensSW, setaAvancarsw));
-setaAvancarhsm.addEventListener("click", avancar(imagensHSM, setaVoltarhsm));
-setaVoltarsw.addEventListener("click", voltar(imagensSW, setaVoltarsw));
-setaVoltarhsm.addEventListener("click", voltar(imagensHSM, setaVoltarhsm));
+setaAvancarsw.addEventListener("click", avancar(imagensSW, setaAvancarsw, mostrarSW, opacidadeSW));
+setaAvancarhsm.addEventListener("click", avancar(imagensHSM, setaVoltarhsm, mostrarHSM, opacidadeHSM));
 
-function avancar(imagens, setaAvancar) {
+setaVoltarsw.addEventListener("click", voltar(imagensSW, setaVoltarsw, mostrarSW, opacidadeSW));
+setaVoltarhsm.addEventListener("click", voltar(imagensHSM, setaVoltarhsm, mostrarHSM, opacidadeHSM));
+
+function avancar(imagens, setaAvancar, mostrar, opacidade) {
   if (imagemAtual === imagens.length - 1) {
     return;
   }
 
   imagemAtual++;
-  esconderImagemAberta();
-  mostrarImagem(imagens);
-  mostrarOuEsconderSetaAvancar(imagens, setaAvancar);
+  esconderImagemAberta(mostrar);
+  mostrarImagem(imagens, mostrar);
+  mostrarOuEsconderSetaAvancar(imagens, setaAvancar, opacidade);
 }
 
-function voltar(imagens, setaVoltar) {
+function voltar(imagens, setaVoltar, mostrar, opacidade) {
     if (imagemAtual === 0) {
         return;
       }
     
       imagemAtual--;
     
-      esconderImagemAberta();
-      mostrarImagem(imagens);
-      mostrarOuEsconderSetaVoltar(setaVoltar);
+      esconderImagemAberta(mostrar);
+      mostrarImagem(imagens, mostrar);
+      mostrarOuEsconderSetaVoltar(setaVoltar, opacidade);
 }
 
-function esconderImagemAberta() {
-  const imagemAberta = document.querySelector(".show");
-  imagemAberta.classList.remove("show");
+function esconderImagemAberta(mostrar) {
+  imagemAberta.classList.remove(mostrar);
 }
 
-function mostrarImagem(imagens) {
-  imagens[imagemAtual].classList.add("show");
+function mostrarImagem(imagens, mostrar) {
+  imagens[imagemAtual].classList.add(mostrar);
 }
 
-function mostrarOuEsconderSetaAvancar(imagens, setaAvancar) {
+function mostrarOuEsconderSetaAvancar(imagens, setaAvancar, opacidade) {
   const EhAUltimaImagem =
     imagemAtual !== 0 && imagemAtual === imagens.length - 1;
   if (EhAUltimaImagem) {
-    setaAvancar.classList.add("opacity");
+    setaAvancar.classList.add(opacidade);
   } else {
-    setaAvancar.classList.remove("opacity");
+    setaAvancar.classList.remove(opacidade);
   }
 }
 
-function mostrarOuEsconderSetaVoltar(setaVoltar) {
+function mostrarOuEsconderSetaVoltar(setaVoltar, opacidade) {
   const naoEhAPrimeiraImagem = imagemAtual !== 0;
   if (naoEhAPrimeiraImagem) {
-    setaVoltar.classList.remove("opacity");
+    setaVoltar.classList.remove(opacidade);
   } else {
-    setaVoltar.classList.add("opacity");
+    setaVoltar.classList.add(opacidade);
   }
 }

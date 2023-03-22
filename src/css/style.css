@@ -121,7 +121,7 @@ body{
     height: 32rem;
 }
 
-/* OPACITY = 1 */
+/* OPACITY: 1 */
 .star-wars-list .show, .high-school-musical-list .show-1{
     opacity: 1;
 }
