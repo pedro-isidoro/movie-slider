@@ -7,45 +7,46 @@ const setaVoltarhsm = document.getElementById("back-arrow-1");
 const imagensSW = document.querySelectorAll(".slide-sw");
 const imagensHSM = document.querySelectorAll(".slide-hsm");
 
-const mostrarSW = document.querrySelector(".show");
-const mostrarHSM = document.querrySelector(".show-1");
+const mostrarSW = document.querySelector(".show");
+const mostrarHSM = document.querySelector(".show-1");
 
 const opacidadeSW = document.querySelector(".opacity");
 const opacidadeHSM = document.querySelector(".opacity-1");
 
 let imagemAtual = 0;
 
-setaAvancarsw.addEventListener("click", avancar(imagensSW, setaAvancarsw, mostrarSW, opacidadeSW));
-setaAvancarhsm.addEventListener("click", avancar(imagensHSM, setaVoltarhsm, mostrarHSM, opacidadeHSM));
+setaAvancarsw.addEventListener("click", avancar(imagensSW, setaAvancarsw, mostrarSW, "show", opacidadeSW));
+setaAvancarhsm.addEventListener("click", avancar(imagensHSM, setaVoltarhsm, mostrarHSM, "show-1", opacidadeHSM));
 
-setaVoltarsw.addEventListener("click", voltar(imagensSW, setaVoltarsw, mostrarSW, opacidadeSW));
-setaVoltarhsm.addEventListener("click", voltar(imagensHSM, setaVoltarhsm, mostrarHSM, opacidadeHSM));
+setaVoltarsw.addEventListener("click", voltar(imagensSW, setaVoltarsw, mostrarSW, "show" ,opacidadeSW));
+setaVoltarhsm.addEventListener("click", voltar(imagensHSM, setaVoltarhsm, mostrarHSM, "show-1", opacidadeHSM));
 
-function avancar(imagens, setaAvancar, mostrar, opacidade) {
+function avancar(imagens, setaAvancar, mostrar, show, opacidade) {
   if (imagemAtual === imagens.length - 1) {
     return;
   }
 
   imagemAtual++;
-  esconderImagemAberta(mostrar);
+  esconderImagemAberta(mostrar, show);
   mostrarImagem(imagens, mostrar);
   mostrarOuEsconderSetaAvancar(imagens, setaAvancar, opacidade);
 }
 
-function voltar(imagens, setaVoltar, mostrar, opacidade) {
+function voltar(imagens, setaVoltar, mostrar, show, opacidade) {
     if (imagemAtual === 0) {
         return;
       }
     
       imagemAtual--;
     
-      esconderImagemAberta(mostrar);
+      esconderImagemAberta(mostrar, show);
       mostrarImagem(imagens, mostrar);
       mostrarOuEsconderSetaVoltar(setaVoltar, opacidade);
 }
 
-function esconderImagemAberta(mostrar) {
-  imagemAberta.classList.remove(mostrar);
+function esconderImagemAberta(mostrar, show) {
+  const imagemAberta = mostrar;
+  imagemAberta.classList.remove(show);
 }
 
 function mostrarImagem(imagens, mostrar) {
