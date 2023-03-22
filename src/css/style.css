@@ -7,12 +7,11 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 5rem;
 }
 
 /* HEADER */
 .header{
-    margin: 2rem 0 8rem 0;
+    margin: 2rem 0;
 }
 
 .header .general-title{
@@ -47,10 +46,6 @@ body{
     transition: 0.3s ease-in-out;
 }
 
-.star-wars-list .slide-sw.show{
-    opacity: 1;
-}
-
 /* HIGH SCHOOL MUSICAL */
 .high-school-musical-slider{
     grid-area: high-school-musical;
@@ -64,10 +59,6 @@ body{
     position: absolute;
     opacity: 0;
     transition: 0.3s ease-in-out;
-}
-
-.high-school-musical-list .show-1{
-    opacity: 1;
 }
 
 /* Hobbit */
@@ -128,6 +119,11 @@ body{
 .slide-h .hobbit-image, .slide-t .transformers-image{
     width: 22rem;
     height: 32rem;
+}
+
+/* OPACITY = 1 */
+.star-wars-list .show, .high-school-musical-list .show-1{
+    opacity: 1;
 }
 
 /* Arrows */
