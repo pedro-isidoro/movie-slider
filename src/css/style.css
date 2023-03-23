@@ -2,7 +2,7 @@
 body{
     background-color: black;
     height: 100vh;
-    margin: 0 2rem;
+    /* margin: 0 2rem; */
     
     display: grid;
     grid: 'cabecalho'
@@ -17,6 +17,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    text-align: center;
 }
 
 .header .general-title{
@@ -24,12 +25,16 @@ body{
     font-size: 4rem;
 }
 
+.header .logo-image img{
+    width: 60%;
+}
+
 .header .menu{
     display: flex;
 }
 
 .header .menu li{
-    font-size: 1.8rem;
+    font-size: 2rem;
 
     padding: 0 0.4rem;
 }
@@ -39,9 +44,7 @@ body{
 }
 
 .header .menu li a:hover{
-    border-radius: 2rem;
-    color: black;
-    background-color: var(--logo-color);
+    color: var(--logo-color);
 }
 
 /* PANEL */

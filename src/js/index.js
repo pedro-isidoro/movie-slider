@@ -59,7 +59,7 @@ function voltar(imagens, setaVoltar, mostrar, show, opacidade) {
       imagemAtual--;
     
       esconderImagemAberta(mostrar, show);
-      mostrarImagem(imagens, mostrar);
+      mostrarImagem(imagens, show);
       mostrarOuEsconderSetaVoltar(setaVoltar, opacidade);
 }
 
@@ -68,8 +68,8 @@ function esconderImagemAberta(mostrar, show) {
   imagemAberta.classList.remove(show);
 }
 
-function mostrarImagem(imagens, mostrar) {
-  imagens[imagemAtual].classList.add(mostrar);
+function mostrarImagem(imagens, show) {
+  imagens[imagemAtual].classList.add(show);
 }
 
 function mostrarOuEsconderSetaAvancar(imagens, setaAvancar, opacidade) {
