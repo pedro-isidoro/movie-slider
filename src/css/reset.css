@@ -1,5 +1,11 @@
+@font-face {
+    font-family: 'bebas';
+    src: url('../fonts/bebas_neue/BebasNeue-Regular.otf'), url('../fonts/bebas_neue/BebasNeue-Regular.ttf'), url('../fonts/bebas_neue/BebasNeue-Regular.eot');
+}
+
 html{
     font-size: 62.5%;
+    font-family: 'bebas', sans-serif;
 }
 
 *{
