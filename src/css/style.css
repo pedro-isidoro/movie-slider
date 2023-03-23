@@ -19,7 +19,7 @@ body{
     align-items: center;
     text-align: center;
 
-    margin: 1rem 0 2rem 0;
+    margin: 1rem 0 1rem 0;
     padding: 0.4rem 0;
     width: 100%;
     border-bottom: 0.1rem solid var(--border-color);
@@ -57,7 +57,7 @@ body{
     align-items: center;
     justify-content: center;
           
-    padding: 1.5rem 0;
+    padding: 0 0 1.5rem 0;
     width: 100%;
 }
 
@@ -79,7 +79,7 @@ body{
 /* STAR WARS */
 .star-wars-slider{
     /* grid-area: star-wars; */
-    background: url(../images/background-general/death-star.jpg) no-repeat;
+    background: url(../images/background-movies/death-star.jpg) no-repeat;
 }
 
 .star-wars-list .slide-sw{
@@ -91,7 +91,7 @@ body{
 /* Hobbit */
 .hobbit-slider{
     /* grid-area: hobbit; */
-    background: url(../images/background-general/hobbit.jpg) no-repeat;
+    background: url(../images/background-movies/hobbit.jpg) no-repeat;
 }
 
 .hobbit-list .slide-h{
@@ -104,7 +104,7 @@ body{
 /* TRANSFORMERS */
 .transformers-slider{
     /* grid-area: transformers; */
-    background: url(../images/background-general/transformers-2.jpg) no-repeat;
+    background: url(../images/background-movies/transformers-1.jpg) no-repeat;
 }
 
 .transformers-list .slide-t{
@@ -117,7 +117,7 @@ body{
 /* HIGH SCHOOL MUSICAL */
 .high-school-musical-slider{
     /* grid-area: high-school-musical; */
-    background: url(../images/background-general/high-school-musical.jpg) no-repeat;
+    background: url(../images/background-movies/high-school-musical.jpg) no-repeat;
 }
 
 .high-school-musical-list .slide-hsm{
