@@ -1,7 +1,7 @@
 :root {
     /* HEADER'S COLORS */
     --logo-color: rgb(187, 7, 7);
-    --link-color: rgb(254, 254, 254);
+    --li-color: rgb(254, 254, 254);
     
     --border-color: rgb(255, 255, 255);
 }
