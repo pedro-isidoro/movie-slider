@@ -40,6 +40,8 @@ body{
 
 .header .menu li a:hover{
     border-radius: 2rem;
+    color: black;
+    background-color: var(--logo-color);
 }
 
 /* PANEL */

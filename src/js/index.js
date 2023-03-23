@@ -1,17 +1,27 @@
 const setaAvancarsw = document.getElementById("forward-arrow");
 const setaAvancarhsm = document.getElementById("forward-arrow-1");
+const setaAvancarh = document.getElementById("forward-arrow-2");
+const setaAvancart = document.getElementById("forward-arrow-3");
 
 const setaVoltarsw = document.getElementById("back-arrow");
 const setaVoltarhsm = document.getElementById("back-arrow-1");
+const setaVoltarh = document.getElementById("back-arrow-2");
+const setaVoltart = document.getElementById("back-arrow-3");
 
 const imagensSW = document.querySelectorAll(".slide-sw");
 const imagensHSM = document.querySelectorAll(".slide-hsm");
+const imagensH = document.querySelectorAll(".slide-h");
+const imagensT = document.querySelectorAll(".slide-t");
 
 const mostrarSW = document.querySelector(".show");
 const mostrarHSM = document.querySelector(".show-1");
+const mostrarH = document.querySelector(".show-2");
+const mostrarT = document.querySelector(".show-3");
 
 const opacidadeSW = document.querySelector(".opacity");
 const opacidadeHSM = document.querySelector(".opacity-1");
+const opacidadeH = document.querySelector(".opacity-2");
+const opacidadeT = document.querySelector(".opacity-3");
 
 let imagemAtual = 0;
 
