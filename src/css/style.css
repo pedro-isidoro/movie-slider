@@ -49,15 +49,24 @@ body{
     gap: 1.5rem;
 
     grid-area: painel;
-    display: grid;
+    /* display: grid;
     place-items: center;
     grid: 'star-wars high-school-musical hobbit' 
-          'transformers . .';
+          'transformers . .'; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* FILMES DE AVENTURA */
+.panel .filmes-de-aventura{
+    display: flex;
 }
 
 /* STAR WARS */
 .star-wars-slider{
-    grid-area: star-wars;
+    /* grid-area: star-wars; */
     background: url(../images/background-general/death-star.jpg) no-repeat;
     background-size: cover;
     background-position: center;
@@ -70,24 +79,9 @@ body{
     transition: 0.3s ease-in-out;
 }
 
-/* HIGH SCHOOL MUSICAL */
-.high-school-musical-slider{
-    grid-area: high-school-musical;
-    background: url(../images/background-general/high-school-musical.jpg) no-repeat;
-    background-size: cover;
-    background-position: center;
-    border: 0.05rem solid #fff;
-}
-
-.high-school-musical-list .slide-hsm{
-    position: absolute;
-    opacity: 0;
-    transition: 0.3s ease-in-out;
-}
-
 /* Hobbit */
 .hobbit-slider{
-    grid-area: hobbit;
+    /* grid-area: hobbit; */
     background: url(../images/background-general/hobbit.jpg) no-repeat;
     background-size: cover;
     background-position: center;
@@ -104,9 +98,10 @@ body{
     opacity: 1;
 }
 
+/* filmes de acao */
 /* TRANSFORMERS */
 .transformers-slider{
-    grid-area: transformers;
+    /* grid-area: transformers; */
     background: url(../images/background-general/transformers-2.jpg) no-repeat;
     background-size: cover;
     background-position: top;
@@ -121,6 +116,22 @@ body{
 
 .transformers-list .show-3{
     opacity: 1;
+}
+
+/* FILMES DE MUSICAL */
+/* HIGH SCHOOL MUSICAL */
+.high-school-musical-slider{
+    /* grid-area: high-school-musical; */
+    background: url(../images/background-general/high-school-musical.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    border: 0.05rem solid #fff;
+}
+
+.high-school-musical-list .slide-hsm{
+    position: absolute;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
 }
 
 /* flex-direction: row */
