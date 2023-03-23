@@ -62,15 +62,13 @@ body{
 /* FILMES DE AVENTURA */
 .panel .filmes-de-aventura{
     display: flex;
+    gap: 1.5rem;
 }
 
 /* STAR WARS */
 .star-wars-slider{
     /* grid-area: star-wars; */
     background: url(../images/background-general/death-star.jpg) no-repeat;
-    background-size: cover;
-    background-position: center;
-    border: 0.05rem solid #fff;
 }
 
 .star-wars-list .slide-sw{
@@ -83,9 +81,6 @@ body{
 .hobbit-slider{
     /* grid-area: hobbit; */
     background: url(../images/background-general/hobbit.jpg) no-repeat;
-    background-size: cover;
-    background-position: center;
-    border: 0.05rem solid #fff;
 }
 
 .hobbit-list .slide-h{
@@ -94,18 +89,11 @@ body{
     transition: 0.3s ease-in-out;
 }
 
-.hobbit-list .show-2{
-    opacity: 1;
-}
-
 /* filmes de acao */
 /* TRANSFORMERS */
 .transformers-slider{
     /* grid-area: transformers; */
     background: url(../images/background-general/transformers-2.jpg) no-repeat;
-    background-size: cover;
-    background-position: top;
-    border: 0.05rem solid #fff;
 }
 
 .transformers-list .slide-t{
@@ -114,18 +102,11 @@ body{
     transition: 0.3s ease-in-out;
 }
 
-.transformers-list .show-3{
-    opacity: 1;
-}
-
 /* FILMES DE MUSICAL */
 /* HIGH SCHOOL MUSICAL */
 .high-school-musical-slider{
     /* grid-area: high-school-musical; */
     background: url(../images/background-general/high-school-musical.jpg) no-repeat;
-    background-size: cover;
-    background-position: center;
-    border: 0.05rem solid #fff;
 }
 
 .high-school-musical-list .slide-hsm{
@@ -144,9 +125,12 @@ body{
 
 /* Movies-sliders */
 .star-wars-slider, .high-school-musical-slider, .hobbit-slider, .transformers-slider{
+    background-size: cover;
+    background-position: center;
     position: relative;
     min-width: 40rem;
     height: 26rem;
+    border: 0.05rem solid var(--border-color);
 }
 
 /* IMAGES */
@@ -157,7 +141,8 @@ body{
 }
 
 /* OPACITY: 1 */
-.star-wars-list .show, .high-school-musical-list .show-1{
+.star-wars-list .show, .high-school-musical-list .show-1, 
+.hobbit-list .show-2, .transformers-list .show-3{
     opacity: 1;
 }
 
