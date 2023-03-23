@@ -23,10 +23,10 @@ body{
     align-items: center;
     text-align: center;
 
-    margin: 1rem 0 1rem 0;
-    padding: 0.4rem 0;
+    padding: 1rem 0 0.4rem 0;
     width: 100%;
     border-bottom: 0.1rem solid var(--border-color);
+    background-color: var(--header-footer-color);
 }
 
 .header .logo-image img{
@@ -192,7 +192,7 @@ body{
     margin: 4rem 0;
     border-top: 0.1rem solid var(--border-color);
 
-    /* background-color: var(--footer-color); */
+    background-color: var(--header-footer-color);
 }
 
 .footer nav{
