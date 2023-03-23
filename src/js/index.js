@@ -1,4 +1,4 @@
-// SETA AVANCAR
+/*// SETA AVANCAR
 const setaAvancarsw = document.getElementById("forward-arrow");
 const setaAvancarhsm = document.getElementById("forward-arrow-1");
 const setaAvancarh = document.getElementById("forward-arrow-2");
@@ -89,4 +89,4 @@ function mostrarOuEsconderSetaVoltar(setaVoltar, opacidade) {
   } else {
     setaVoltar.classList.add(opacidade);
   }
-}
+}*/
