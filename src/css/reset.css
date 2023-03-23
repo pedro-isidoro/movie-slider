@@ -3,9 +3,10 @@
     src: url('../fonts/bebas_neue/BebasNeue-Regular.otf'), url('../fonts/bebas_neue/BebasNeue-Regular.ttf'), url('../fonts/bebas_neue/BebasNeue-Regular.eot');
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+
 html{
     font-size: 62.5%;
-    font-family: 'bebas', sans-serif;
 }
 
 *{
