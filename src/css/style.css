@@ -67,7 +67,7 @@ body{
 
 .panel .general-title{
     font-size: 2.6rem;
-    color: var(--logo-color);
+    color: var(--title-color);
 
     margin: 4rem 0;
 }
