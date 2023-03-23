@@ -62,7 +62,6 @@ body{
 }
 
 .panel .general-title{
-    font-family: 'Roboto Condensed', sans-serif;
     font-size: 2.6rem;
     color: var(--logo-color);
 
@@ -186,8 +185,14 @@ body{
 /* FOOTER */
 .footer{
     grid-area: rodape;
-    margin: 6rem 0;
-    font-family: 'bebas', sans-serif; 
+    margin: 4rem 0;
+    border-top: 0.1rem solid var(--border-color);
+
+    background-color: var(--footer-color);
+}
+
+.footer nav{
+    margin: 3.5rem 0 3rem 0;
 }
 
 .footer .footer-menu{
@@ -196,6 +201,7 @@ body{
     justify-content: center;
 
     padding: 2rem 0;
+    font-family: 'bebas', sans-serif; 
 }
 
 .footer .footer-menu li{
@@ -217,14 +223,38 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+
+    margin: 1rem 0 3rem 0;
+}
+
+.contacts .social{
+    margin-right: 10rem;
+}
+
+.contacts .social p{
+    padding: 0.5rem 0;
 }
 
 .contacts .social .email{
-    font-size: 2rem;
+    font-size: 1.7rem;
+    color: var(--li-color);
+}
+
+.contacts .social .telephone{
+    font-size: 1.7rem;
     color: var(--li-color);
 }
 
 .contacts .social-media .nets{
     display: flex;
     flex-direction: column;
+}
+
+.contacts .social-media .nets li{
+    font-size: 1.7rem;
+    padding: 0.5rem 0;
+}
+
+.contacts .social-media .nets li a:hover{
+    color: var(--logo-color);
 }
