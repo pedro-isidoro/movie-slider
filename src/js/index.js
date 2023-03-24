@@ -1,4 +1,4 @@
-/*// SETA AVANCAR
+// SETA AVANCAR
 const setaAvancarsw = document.getElementById("forward-arrow");
 const setaAvancarhsm = document.getElementById("forward-arrow-1");
 const setaAvancarh = document.getElementById("forward-arrow-2");
@@ -12,9 +12,9 @@ const setaVoltart = document.getElementById("back-arrow-3");
 
 // IMAGENS
 const imagensSW = document.querySelectorAll(".slide-sw");
-const imagensHSM = document.querySelectorAll(".slide-hsm");
 const imagensH = document.querySelectorAll(".slide-h");
 const imagensT = document.querySelectorAll(".slide-t");
+const imagensHSM = document.querySelectorAll(".slide-hsm");
 
 // CLASSES DE OPACIDADE 1
 const mostrarSW = document.querySelector(".show");
@@ -22,71 +22,130 @@ const mostrarHSM = document.querySelector(".show-1");
 const mostrarH = document.querySelector(".show-2");
 const mostrarT = document.querySelector(".show-3");
 
-// OPACIDADE DA SETA
-const opacidadeSW = document.querySelector(".opacity");
-const opacidadeHSM = document.querySelector(".opacity-1");
-const opacidadeH = document.querySelector(".opacity-2");
-const opacidadeT = document.querySelector(".opacity-3");
-
 let imagemAtual = 0;
 
-setaAvancarsw.addEventListener("click", avancar(imagensSW, setaAvancarsw, mostrarSW, "show", opacidadeSW));
-setaAvancarhsm.addEventListener("click", avancar(imagensHSM, setaVoltarhsm, mostrarHSM, "show-1", opacidadeHSM));
-setaAvancarh.addEventListener("click", avancar(imagensH, setaVoltarh, mostrarH, "show-2", opacidadeH));
-setaAvancart.addEventListener("click", avancar(imagensT, setaVoltart, mostrarT, "show-3", opacidadeT));
+setaAvancarsw.addEventListener("click", () => {avancar (0, imagensSW, setaAvancarsw) });
+setaVoltarsw.addEventListener("click", () => {voltar (0, imagensSW, setaVoltarsw) });
 
-setaVoltarsw.addEventListener("click", voltar(imagensSW, setaVoltarsw, mostrarSW, "show" ,opacidadeSW));
-setaVoltarhsm.addEventListener("click", voltar(imagensHSM, setaVoltarhsm, mostrarHSM, "show-1", opacidadeHSM));
-setaVoltarh.addEventListener("click", voltar(imagensH, setaVoltarh, mostrarH, "show-2", opacidadeH));
-setaVoltart.addEventListener("click", voltar(imagensT, setaVoltart, mostrarT, "show-3", opacidadeT));
+setaAvancarh.addEventListener("click", () => {avancar (1, imagensH, setaVoltarh) });
+setaVoltarh.addEventListener("click", () => {voltar (1, imagensH, setaVoltarh) });
 
-function avancar(imagens, setaAvancar, mostrar, show, opacidade) {
+setaAvancart.addEventListener("click", () => {avancar (2, imagensT, setaVoltart) });
+setaVoltart.addEventListener("click", () => {voltar (2, imagensT, setaVoltart) });
+
+setaAvancarhsm.addEventListener("click", () => {avancar (3, imagensHSM, setaVoltarhsm) });
+setaVoltarhsm.addEventListener("click", () => {voltar (3, imagensHSM, setaVoltarhsm) });
+
+function avancar(i, imagens, setaAvancar) {
   if (imagemAtual === imagens.length - 1) {
     return;
   }
 
   imagemAtual++;
-  esconderImagemAberta(mostrar, show);
-  mostrarImagem(imagens, mostrar);
-  mostrarOuEsconderSetaAvancar(imagens, setaAvancar, opacidade);
+  esconderImagemAberta(i);
+  mostrarImagem(imagens);
+  mostrarOuEsconderSetaAvancar(i, imagens, setaAvancar);
 }
 
-function voltar(imagens, setaVoltar, mostrar, show, opacidade) {
+function voltar(i, imagens, setaVoltar) {
     if (imagemAtual === 0) {
         return;
       }
     
       imagemAtual--;
     
-      esconderImagemAberta(mostrar, show);
-      mostrarImagem(imagens, show);
-      mostrarOuEsconderSetaVoltar(setaVoltar, opacidade);
+      esconderImagemAberta(i);
+      mostrarImagem(imagens);
+      mostrarOuEsconderSetaVoltar(i, setaVoltar);
 }
 
-function esconderImagemAberta(mostrar, show) {
-  const imagemAberta = mostrar;
-  imagemAberta.classList.remove(show);
-}
-
-function mostrarImagem(imagens, show) {
-  imagens[imagemAtual].classList.add(show);
-}
-
-function mostrarOuEsconderSetaAvancar(imagens, setaAvancar, opacidade) {
-  const EhAUltimaImagem =
-    imagemAtual !== 0 && imagemAtual === imagens.length - 1;
-  if (EhAUltimaImagem) {
-    setaAvancar.classList.add(opacidade);
-  } else {
-    setaAvancar.classList.remove(opacidade);
+function esconderImagemAberta(i) {
+  switch(i){
+    case 0:
+      mostrarSW.classList.remove("show");
+      break;
+    case 1:
+      mostrarH.classList.remove("show-2");
+      break;
+    case 2:
+      mostrarT.classList.remove("show-3");
+      break;
+    case 3:
+      mostrarHSM.classList.remove("show-1");
+      break;
   }
 }
 
-function mostrarOuEsconderSetaVoltar(setaVoltar, opacidade) {
+function mostrarImagem(imagens) {
+  imagens[imagemAtual].classList.add("show");
+}
+
+function mostrarOuEsconderSetaAvancar(i, imagens, setaAvancar) {
+  const EhAUltimaImagem = imagemAtual !== 0 && imagemAtual === imagens.length - 1;
+  if (EhAUltimaImagem) {
+    switch(i){
+      case 0:
+        setaAvancar.classList.add("opacidade");
+        break;
+      case 1:
+        setaAvancar.classList.add("opacidade-1");
+        break;
+      case 2:
+        setaAvancar.classList.add("opacidade-2");
+        break;
+      case 3:
+        setaAvancar.classList.add("opacidade-3");
+        break;
+    }
+  } else {
+    switch(i){
+      case 0:
+        setaAvancar.classList.remove("opacidade");
+        break;
+      case 1:
+        setaAvancar.classList.remove("opacidade-1");
+        break;
+      case 2:
+        setaAvancar.classList.remove("opacidade-2");
+        break;
+      case 3:
+        setaAvancar.classList.remove("opacidade-3");
+        break;
+    }
+  }
+}
+
+function mostrarOuEsconderSetaVoltar(i, setaVoltar) {
   const naoEhAPrimeiraImagem = imagemAtual !== 0;
   if (naoEhAPrimeiraImagem) {
-    setaVoltar.classList.remove(opacidade);
+    switch(i){
+      case 0:
+        setaVoltar.classList.remove("opacidade");
+        break;
+      case 1:
+        setaVoltar.classList.remove("opacidade-1");
+        break;
+      case 2:
+        setaVoltar.classList.remove("opacidade-2");
+        break;
+      case 3:
+        setaVoltar.classList.remove("opacidade-3");
+        break;
+    }
   } else {
-    setaVoltar.classList.add(opacidade);
+    switch(i){
+      case 0:
+        setaVoltar.classList.add("opacidade");
+        break;
+      case 1:
+        setaVoltar.classList.add("opacidade-1");
+        break;
+      case 2:
+        setaVoltar.classList.add("opacidade-2");
+        break;
+      case 3:
+        setaVoltar.classList.add("opacidade-3");
+        break;
+    }
   }
-}*/
+}
