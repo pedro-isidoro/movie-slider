@@ -12,15 +12,18 @@ const setaVoltart = document.getElementById("back-arrow-3");
 
 // IMAGENS
 const imagensSW = document.querySelectorAll(".slide-sw");
-console.log(imagensSW);
+// console.log(imagensSW);
 const imagensH = document.querySelectorAll(".slide-h");
-console.log(imagensH);
+// console.log(imagensH);
 const imagensT = document.querySelectorAll(".slide-t");
-console.log(imagensT);
+// console.log(imagensT);
 const imagensHSM = document.querySelectorAll(".slide-hsm");
-console.log(imagensHSM);
+// console.log(imagensHSM);
 
-let imagemAtual = 0;
+let imagemAtualSW = 0;
+let imagemAtualH = 0;
+let imagemAtualT = 0;
+let imagemAtualHSM = 0;
 
 // CLASSES DE OPACIDADE 1
 const mostrarSW = document.querySelector(".show");
@@ -29,20 +32,20 @@ const mostrarH = document.querySelector(".show-2");
 const mostrarT = document.querySelector(".show-3");
 
 // EVENTLISTENER
-setaAvancarsw.addEventListener("click", () => { avancar(0, imagensSW, setaAvancarsw); });
-setaVoltarsw.addEventListener("click", () => { voltar(0, imagensSW, setaVoltarsw); });
+setaAvancarsw.addEventListener("click", () => { avancar(imagemAtualSW, 0, imagensSW, setaAvancarsw); });
+setaVoltarsw.addEventListener("click", () => { voltar(imagemAtualSW, 0, imagensSW, setaVoltarsw); });
 
-setaAvancarh.addEventListener("click", () => { avancar(1, imagensH, setaVoltarh); });
-setaVoltarh.addEventListener("click", () => { voltar(1, imagensH, setaVoltarh); });
+setaAvancarh.addEventListener("click", () => { avancar(imagemAtualH, 1, imagensH, setaVoltarh); });
+setaVoltarh.addEventListener("click", () => { voltar(imagemAtualH, 1, imagensH, setaVoltarh); });
 
-setaAvancart.addEventListener("click", () => { avancar(2, imagensT, setaVoltart); });
-setaVoltart.addEventListener("click", () => { voltar(2, imagensT, setaVoltart); });
+setaAvancart.addEventListener("click", () => { avancar(imagemAtualT, 2, imagensT, setaVoltart); });
+setaVoltart.addEventListener("click", () => { voltar(imagemAtualT, 2, imagensT, setaVoltart); });
 
-setaAvancarhsm.addEventListener("click", () => { avancar(3, imagensHSM, setaVoltarhsm); });
-setaVoltarhsm.addEventListener("click", () => { voltar(3, imagensHSM, setaVoltarhsm); });
+setaAvancarhsm.addEventListener("click", () => { avancar(imagemAtualHSM, 3, imagensHSM, setaVoltarhsm); });
+setaVoltarhsm.addEventListener("click", () => { voltar(imagemAtualHSM, 3, imagensHSM, setaVoltarhsm); });
 
-function avancar(i, imagens, setaAvancar) {
-  console.log("imagem atual: ", imagemAtual);
+function avancar(imagemAtual, i, imagens, setaAvancar) {
+  console.log(imagemAtual)
   if (imagemAtual === imagens.length - 1) {
     return;
   }
@@ -54,9 +57,7 @@ function avancar(i, imagens, setaAvancar) {
   mostrarOuEsconderSetaAvancar(imagemAtual, i, imagens, setaAvancar);
 };
 
-function voltar(i, imagens, setaVoltar) {
-  let imagemAtual = imagens.length - 1;
-  console.log("imagem atual: ", imagemAtual);
+function voltar(imagemAtual, i, imagens, setaVoltar) {
   if (imagemAtual === 0) {
     return;
   }
