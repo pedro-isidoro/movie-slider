@@ -174,17 +174,17 @@ function mostrarOuEsconderSetaVoltar(imagemAtual, i, setaVoltar) {
 };*/
 
 const imagesSW = [
-  "../images/movies/star-wars-I.jpg",
-  "../images/movies/star-wars-II.jpg",
-  "../images/movies/star-wars-III.jpg",
-  "../images/movies/star-wars-IV.jpg",
-  "../images/movies/star-wars-han-solo.jpg",
-  "../images/movies/star-wars-rogue-one.jpg",
-  "../images/movies/star-wars-V.jpg",
-  "../images/movies/star-wars-VI.jpg",
-  "../images/movies/star-wars-VII.jpg",
-  "../images/movies/star-wars-VIII.jpg",
-  "../images/movies/star-wars-IX.jpg"
+  "./src/images/movies/star-wars-I.jpg",
+  "./src/images/movies/star-wars-II.jpg",
+  "./src/images/movies/star-wars-III.jpg",
+  "./src/images/movies/star-wars-IV.jpg",
+  "./src/images/movies/star-wars-han-solo.jpg",
+  "./src/images/movies/star-wars-rogue-one.jpg",
+  "./src/images/movies/star-wars-V.jpg",
+  "./src/images/movies/star-wars-VI.jpg",
+  "./src/images/movies/star-wars-VII.jpg",
+  "./src/images/movies/star-wars-VIII.jpg",
+  "./src/images/movies/star-wars-IX.jpg",
 ];
 
 let currentImageIndex = 0;
@@ -196,19 +196,19 @@ function showImageSW() {
   console.log(imageElement.src)
 };
 
-function backArrow() {
+function forwardArrow() {
   currentImageIndex = (currentImageIndex + 1) % imagesSW.length;
-  console.log(currentImageIndex)
   showImageSW();
+  console.log(currentImageIndex)
 };
 
-function forwardArrow() {
+function backArrow() {
   currentImageIndex = (currentImageIndex + imagesSW.length - 1) % imagesSW;
-  console.log(currentImageIndex)
   showImageSW();
+  console.log(currentImageIndex)
 };
 
 showImageSW();
 
-document.getElementById("back-arrow").addEventListener("click", backArrow);
-document.getElementById("forward-arrow").addEventListener("click", forwardArrow);
+document.getElementById("forward-arrow").addEventListener("click", forwardArrow());
+document.getElementById("back-arrow").addEventListener("click", backArrow());

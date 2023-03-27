@@ -189,7 +189,7 @@ body{
 /* FOOTER */
 .footer{
     grid-area: rodape;
-    margin: 4rem 0;
+    margin: 4rem 0 0 0;
     border-top: 0.1rem solid var(--border-color);
 
     background-color: var(--header-footer-color);
