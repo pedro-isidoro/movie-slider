@@ -180,7 +180,7 @@ const imagesSW = [
   "./src/images/movies/star-wars-IV.jpg",
   "./src/images/movies/star-wars-han-solo.jpg",
   "./src/images/movies/star-wars-rogue-one.jpg",
-  "./src/images/movies/star-wars-V.jpg",
+  "./src/images/movies/star-wars-V.png",
   "./src/images/movies/star-wars-VI.jpg",
   "./src/images/movies/star-wars-VII.jpg",
   "./src/images/movies/star-wars-VIII.jpg",
@@ -193,22 +193,26 @@ const imageElement = document.getElementById("image-sw");
 
 function showImageSW() {
   imageElement.src = imagesSW[currentImageIndex];
-  console.log(imageElement.src)
 };
 
 function forwardArrow() {
+  if(currentImageIndex === imagesSW.length - 1){
+    return
+  };
+
   currentImageIndex = (currentImageIndex + 1) % imagesSW.length;
   showImageSW();
-  console.log(currentImageIndex)
 };
 
 function backArrow() {
+  if(currentImageIndex === 0){
+    return
+  };
   currentImageIndex = (currentImageIndex + imagesSW.length - 1) % imagesSW;
   showImageSW();
-  console.log(currentImageIndex)
 };
 
 showImageSW();
 
-document.getElementById("forward-arrow").addEventListener("click", forwardArrow());
-document.getElementById("back-arrow").addEventListener("click", backArrow());
+document.getElementById("forward-arrow").addEventListener("click", forwardArrow);
+document.getElementById("back-arrow").addEventListener("click", backArrow);
