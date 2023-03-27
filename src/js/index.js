@@ -1,4 +1,4 @@
-// SETA AVANCAR
+/*// SETA AVANCAR
 const setaAvancarsw = document.getElementById("forward-arrow");
 const setaAvancarhsm = document.getElementById("forward-arrow-1");
 const setaAvancarh = document.getElementById("forward-arrow-2");
@@ -171,4 +171,44 @@ function mostrarOuEsconderSetaVoltar(imagemAtual, i, setaVoltar) {
         break;
     };
   };
+};*/
+
+const imagesSW = [
+  "../images/movies/star-wars-I.jpg",
+  "../images/movies/star-wars-II.jpg",
+  "../images/movies/star-wars-III.jpg",
+  "../images/movies/star-wars-IV.jpg",
+  "../images/movies/star-wars-han-solo.jpg",
+  "../images/movies/star-wars-rogue-one.jpg",
+  "../images/movies/star-wars-V.jpg",
+  "../images/movies/star-wars-VI.jpg",
+  "../images/movies/star-wars-VII.jpg",
+  "../images/movies/star-wars-VIII.jpg",
+  "../images/movies/star-wars-IX.jpg"
+];
+
+let currentImageIndex = 0;
+
+const imageElement = document.getElementById("image-sw");
+
+function showImageSW() {
+  imageElement.src = imagesSW[currentImageIndex];
+  console.log(imageElement.src)
 };
+
+function backArrow() {
+  currentImageIndex = (currentImageIndex + 1) % imagesSW.length;
+  console.log(currentImageIndex)
+  showImageSW();
+};
+
+function forwardArrow() {
+  currentImageIndex = (currentImageIndex + imagesSW.length - 1) % imagesSW;
+  console.log(currentImageIndex)
+  showImageSW();
+};
+
+showImageSW();
+
+document.getElementById("back-arrow").addEventListener("click", backArrow);
+document.getElementById("forward-arrow").addEventListener("click", forwardArrow);
