@@ -69,7 +69,7 @@ function backArrow(currentImageIndex, imageElement, images) {
 };
 
 showImage(imageElementAdventure, imagesAdventure, currentImageIndexAdventure);
-showImage(imageElementAction, imagensAction, currentImageIndexAction);
+showImage(imageElementAction, imagesAction, currentImageIndexAction);
 
 // ADVENTURE-SECTION
 document.getElementById("forward-arrow").addEventListener("click", () => {forwardArrow(currentImageIndexAdventure, imageElementAdventure, imagesAdventure, adventureSlider)});
