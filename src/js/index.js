@@ -1,35 +1,30 @@
 const imagesAdventure = [
-  "./src/images/movies/star-wars-I.jpg",
-  "./src/images/movies/star-wars-II.jpg",
-  "./src/images/movies/star-wars-III.jpg",
-  "./src/images/movies/star-wars-IV.jpg",
-  "./src/images/movies/star-wars-han-solo.jpg",
-  "./src/images/movies/star-wars-rogue-one.jpg",
-  "./src/images/movies/star-wars-V.png",
-  "./src/images/movies/star-wars-VI.jpg",
-  "./src/images/movies/star-wars-VII.jpg",
-  "./src/images/movies/star-wars-VIII.jpg",
-  "./src/images/movies/star-wars-IX.jpg",
-  "./src/images/movies/Hobbit-1.jpg",
-  "./src/images/movies/Hobbit-2.jpg",
-  "./src/images/movies/Hobbit-3.jpg",
-  "./src/images/movies/o-senhor-dos-aneis-1.jpg",
-  "./src/images/movies/o-senhor-dos-aneis-2.jpg",
-  "./src/images/movies/o-senhor-dos-aneis-3.jpg",
+  "./src/images/movies/star-wars-I.jpg", "./src/images/movies/star-wars-II.jpg",
+  "./src/images/movies/star-wars-III.jpg", "./src/images/movies/star-wars-IV.jpg",
+  "./src/images/movies/star-wars-han-solo.jpg", "./src/images/movies/star-wars-rogue-one.jpg",
+  "./src/images/movies/star-wars-V.png", "./src/images/movies/star-wars-VI.jpg",
+  "./src/images/movies/star-wars-VII.jpg", "./src/images/movies/star-wars-VIII.jpg",
+  "./src/images/movies/star-wars-IX.jpg", 
+  "./src/images/movies/Hobbit-1.jpg", "./src/images/movies/Hobbit-2.jpg",
+  "./src/images/movies/Hobbit-3.jpg", "./src/images/movies/o-senhor-dos-aneis-1.jpg",
+  "./src/images/movies/o-senhor-dos-aneis-2.jpg", "./src/images/movies/o-senhor-dos-aneis-3.jpg"
 ];
 
 const imagesAction = [
-  "./src/images/movies/transformers-1.jpg",
-  "./src/images/movies/transformers-2.jpg",
+  "./src/images/movies/transformers-1.jpg", "./src/images/movies/transformers-2.jpg",
   "./src/images/movies/transformers-3.jpg"
 ];
 
 let currentImageIndex = 0;
 
+// SLIDERS
 const AdventureSlider = document.getElementById("adventure-slider");
+
+// IMAGES
 const imageElementAdventure = document.getElementById("image-adventure");
 const imageElementAction = document.getElementById("image-action");
 
+// FUNCTIONS
 function changeBackground(image){
   if(image === imagesAdventure){
     if(currentImageIndex === 11){
@@ -39,8 +34,8 @@ function changeBackground(image){
 };
 
 function showCurrentImage(){
-  imageElementAdventure.src = imagesAdventure[currentImageIndex];
-  imageElementAction.src = imagesAction[currentImageIndex];
+  imageElementAdventure.src = imagesAdventure[0];
+  imageElementAction.src = imagesAction[0];
 }
 
 function showImage(imageElement, imageCurrent) {
