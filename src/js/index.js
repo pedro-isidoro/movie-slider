@@ -18,15 +18,18 @@ const imagesAdventure = [
   "./src/images/movies/o-senhor-dos-aneis-3.jpg",
 ];
 
-const imagensAction = [
+const imagesAction = [
   "./src/images/movies/transformers-1.jpg",
   "./src/images/movies/transformers-2.jpg",
   "./src/images/movies/transformers-3.jpg"
   
 ];
 
-let currentImageIndex = 0;
+// INDEX
+let currentImageIndexAdventure = 0;
+let currentImageIndexAction = 0;
 
+// SLIDER
 const adventureSlider = document.getElementById("adventure-slider");
 const actionSlider = document.getElementById("action-slider");
 
@@ -35,43 +38,43 @@ const imageElementAdventure = document.getElementById("image-adventure");
 const imageElementAction = document.getElementById("image-action");
 
 // FUNCTIONS
-function alterarFundo(slider){
+function alterarFundo(slider, currentImageIndex){
   if(slider === adventureSlider){
     if(currentImageIndex === 11){
       adventureSlider.style.backgroundImage = "url(./src/images/background-movies/hobbit.jpg)"
     };
-  }
+  };
 };
 
-function showImage(imageElement, images) {
+function showImage(imageElement, images, currentImageIndex) {
   imageElement.src = images[currentImageIndex];
 };
 
-function forwardArrow(imageElement, images, slider) {
-  if(currentImageIndex === imagesAdventure.length - 1){
+function forwardArrow(currentImageIndex, imageElement, images, slider) {
+  if(currentImageIndex === images.length - 1){
     return;
   };
 
-  currentImageIndex = (currentImageIndex + 1) % imagesAdventure.length;
-  showImage(imageElement, images);
-  alterarFundo(slider);
+  currentImageIndex = (currentImageIndex + 1) % images.length;
+  showImage(imageElement, images, currentImageIndex);
+  alterarFundo(slider, currentImageIndex);
 };
 
-function backArrow(imageElement, images) {
+function backArrow(currentImageIndex, imageElement, images) {
   if(currentImageIndex === 0){
     return;
   };
-  currentImageIndex = (currentImageIndex + imagesAdventure.length - 1) % imagesAdventure;
-  showImage(imageElement, images);
+  currentImageIndex = (currentImageIndex + images.length - 1) % images;
+  showImage(imageElement, images, currentImageIndex);
 };
 
-showImage(imageElementAdventure, imagesAdventure);
-showImage(imageElementAction, imagensAction);
+showImage(imageElementAdventure, imagesAdventure, currentImageIndexAdventure);
+showImage(imageElementAction, imagensAction, currentImageIndexAction);
 
 // ADVENTURE-SECTION
-document.getElementById("forward-arrow").addEventListener("click", () => {forwardArrow(imageElementAdventure, imagesAdventure, adventureSlider)});
-document.getElementById("back-arrow").addEventListener("click", () => {backArrow(imageElementAdventure, imagesAdventure)});
+document.getElementById("forward-arrow").addEventListener("click", () => {forwardArrow(currentImageIndexAdventure, imageElementAdventure, imagesAdventure, adventureSlider)});
+document.getElementById("back-arrow").addEventListener("click", () => {backArrow(currentImageIndexAdventure, imageElementAdventure, imagesAdventure)});
 
 // ACTION-SECTION
-document.getElementById("forward-arrow-1").addEventListener("click", () => {forwardArrow(imageElementAction, imagensAction, actionSlider)});
-document.getElementById("back-arrow-1").addEventListener("click", () => {backArrow(imageElementAction, imagensAction)});
+document.getElementById("forward-arrow-1").addEventListener("click", () => {forwardArrow(currentImageIndexAction, imageElementAction, imagesAction, actionSlider)});
+document.getElementById("back-arrow-1").addEventListener("click", () => {backArrow(currentImageIndexAction, imageElementAction, imagesAction)});
