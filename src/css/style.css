@@ -80,38 +80,24 @@ body{
     margin-bottom: 3rem;
 }
 
-/* STAR WARS */
-.star-wars-slider{
-    /* grid-area: star-wars; */
+/* AVENTURA */
+.adventure-slider{
     background: url(../images/background-movies/death-star.jpg) no-repeat;
 }
 
-.star-wars-list .slide-sw{
+.adventure-list .slide-adventure{
     position: absolute;
     opacity: 0;
     transition: 0.3s ease-in-out;
 }
 
-/* Hobbit */
-.hobbit-slider{
-    /* grid-area: hobbit; */
-    background: url(../images/background-movies/hobbit.jpg) no-repeat;
-}
-
-.hobbit-list .slide-h{
-    position: absolute;
-    opacity: 0;
-    transition: 0.3s ease-in-out;
-}
-
-/* filmes de acao */
-/* TRANSFORMERS */
-.transformers-slider{
+/* ACAO */
+.action-slider{
     /* grid-area: transformers; */
     background: url(../images/background-movies/transformers-1.jpg) no-repeat;
 }
 
-.transformers-list .slide-t{
+.action-list .slide-action{
     position: absolute;
     opacity: 0;
     transition: 0.3s ease-in-out;
@@ -131,15 +117,15 @@ body{
 }
 
 /* flex-direction: row */
-.star-wars-list, .high-school-musical-list, .hobbit-list, .transformers-list, 
-.star-wars-slider, .high-school-musical-slider, .hobbit-slider, .transformers-slider{
+.adventure-list, .high-school-musical-list, .action-list, 
+.adventure-slider, .high-school-musical-slider, .action-slider{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 /* Movies-sliders */
-.star-wars-slider, .high-school-musical-slider, .hobbit-slider, .transformers-slider{
+.adventure-slider, .high-school-musical-slider, .action-slider{
     background-size: cover;
     background-position: center;
     position: relative;
@@ -149,15 +135,15 @@ body{
 }
 
 /* IMAGES */
-.slide-sw .star-wars-image, .slide-hsm .high-school-musical-image, 
-.slide-h .hobbit-image, .slide-t .transformers-image{
+.slide-adventure .adventure-image, .slide-hsm .high-school-musical-image, 
+.slide-action .action-image{
     width: 16rem;
     height: 22rem;
 }
 
 /* OPACITY: 1 */
-.star-wars-list .show, .high-school-musical-list .show-1, 
-.hobbit-list .show-2, .transformers-list .show-3{
+.adventure-list .show, .high-school-musical-list .show-2, 
+.action-list .show-1{
     opacity: 1;
 }
 

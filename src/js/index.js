@@ -173,7 +173,7 @@ function mostrarOuEsconderSetaVoltar(imagemAtual, i, setaVoltar) {
   };
 };*/
 
-const imagesSW = [
+const imagesAdventure = [
   "./src/images/movies/star-wars-I.jpg",
   "./src/images/movies/star-wars-II.jpg",
   "./src/images/movies/star-wars-III.jpg",
@@ -185,34 +185,48 @@ const imagesSW = [
   "./src/images/movies/star-wars-VII.jpg",
   "./src/images/movies/star-wars-VIII.jpg",
   "./src/images/movies/star-wars-IX.jpg",
+  "./src/images/movies/Hobbit-1.jpg",
+  "./src/images/movies/Hobbit-2.jpg",
+  "./src/images/movies/Hobbit-3.jpg",
+  "./src/images/movies/o-senhor-dos-aneis-1.jpg",
+  "./src/images/movies/o-senhor-dos-aneis-2.jpg",
+  "./src/images/movies/o-senhor-dos-aneis-3.jpg",
 ];
 
 let currentImageIndex = 0;
 
-const imageElement = document.getElementById("image-sw");
+const AdventureSlider = document.getElementById("adventure-slider");
+const imageElement = document.getElementById("image-adventure");
 
-function showImageSW() {
-  imageElement.src = imagesSW[currentImageIndex];
+function alterarFundo(){
+  if(currentImageIndex === 11){
+    AdventureSlider.style.backgroundImage = "../images/background-movies/hobbit.jpg"
+  };
+};
+
+function showImageAdventure() {
+  imageElement.src = imagesAdventure[currentImageIndex];
 };
 
 function forwardArrow() {
-  if(currentImageIndex === imagesSW.length - 1){
-    return
+  if(currentImageIndex === imagesAdventure.length - 1){
+    return;
   };
 
-  currentImageIndex = (currentImageIndex + 1) % imagesSW.length;
-  showImageSW();
+  currentImageIndex = (currentImageIndex + 1) % imagesAdventure.length;
+  showImageAdventure();
+  alterarFundo();
 };
 
 function backArrow() {
   if(currentImageIndex === 0){
-    return
+    return;
   };
-  currentImageIndex = (currentImageIndex + imagesSW.length - 1) % imagesSW;
-  showImageSW();
+  currentImageIndex = (currentImageIndex + imagesAdventure.length - 1) % imagesAdventure;
+  showImageAdventure();
 };
 
-showImageSW();
+showImageAdventure();
 
 document.getElementById("forward-arrow").addEventListener("click", forwardArrow);
 document.getElementById("back-arrow").addEventListener("click", backArrow);
