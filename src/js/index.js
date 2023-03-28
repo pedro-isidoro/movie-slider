@@ -21,13 +21,20 @@ const imagesAdventure = [
 const imagesAction = [
   "./src/images/movies/transformers-1.jpg",
   "./src/images/movies/transformers-2.jpg",
-  "./src/images/movies/transformers-3.jpg"
+  "./src/images/movies/transformers-3.jpg",
   
 ];
+
+const imagesMusical = [
+  "./src/images/movies/high-school-musical-I.jpg",
+  "./src/images/movies/high-school-musical-II.jpg",
+  "./src/images/movies/high-school-musical-III.jpg",
+]
 
 // INDEX
 let currentImageIndexAdventure = 0;
 let currentImageIndexAction = 0;
+let currentImageIndexMusical = 0;
 
 // SLIDER
 const adventureSlider = document.getElementById("adventure-slider");
