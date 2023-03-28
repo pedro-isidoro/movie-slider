@@ -36,15 +36,21 @@ let currentImageIndexAdventure = 0;
 let currentImageIndexAction = 0;
 let currentImageIndexMusical = 0;
 
+// ADVENTURE-ARROW
+const forwardArrowAdventure = document.getElementById("forward-arrow");
+
+// BACK-ARROW
+const backArrowAdventure = document.getElementById("back-arrow");
+
 // SLIDER
 const adventureSlider = document.getElementById("adventure-slider");
-const actionSlider = document.getElementById("action-slider");
-const musicalSlider = document.getElementById("musical-slider");
+// const actionSlider = document.getElementById("action-slider");
+// const musicalSlider = document.getElementById("musical-slider");
 
 // IMAGES
 const imageElementAdventure = document.getElementById("image-adventure");
-const imageElementAction = document.getElementById("image-action");
-const imageElementMusical = document.getElementById("image-musical");
+// const imageElementAction = document.getElementById("image-action");
+// const imageElementMusical = document.getElementById("image-musical");
 
 // FUNCTIONS
 function alterarFundo(slider, currentImageIndex){
@@ -59,7 +65,25 @@ function showImage(imageElement, images, currentImageIndex) {
   imageElement.src = images[currentImageIndex];
 };
 
-function forwardArrow(currentImageIndex, imageElement, images, slider) {
+function showHideForwardArrow(images, currentImageIndex, forwardArrow){
+  const EhAUltimaImagem = currentImageIndex !== 0 && currentImageIndex === images.length - 1;
+  if(EhAUltimaImagem){
+    forwardArrow.classList.add("opacity");
+  }else{
+    forwardArrow.classList.remove("opacity");
+  };
+};
+
+function showHideBackArrow(currentImageIndex, backArrow){
+  const naoEhAPrimeiraImagem = currentImageIndex !== 0;
+  if(naoEhAPrimeiraImagem){
+    backArrow.classList.remove("opacity");
+  }else{
+    backArrow.classList.add("opacity");
+  };
+};
+
+function forwardArrow(currentImageIndex, imageElement, images, slider, forwardArrow) {
   if(currentImageIndex === images.length - 1){
     return;
   };
@@ -67,28 +91,30 @@ function forwardArrow(currentImageIndex, imageElement, images, slider) {
   currentImageIndex = (currentImageIndex + 1) % images.length;
   showImage(imageElement, images, currentImageIndex);
   alterarFundo(slider, currentImageIndex);
+  showHideForwardArrow(images, currentImageIndex, forwardArrow);
 };
 
-function backArrow(currentImageIndex, imageElement, images) {
+function backArrow(currentImageIndex, imageElement, images, backArrow) {
   if(currentImageIndex === 0){
     return;
   };
   currentImageIndex = (currentImageIndex + images.length - 1) % images;
   showImage(imageElement, images, currentImageIndex);
+  showHideBackArrow(currentImageIndex, backArrow);
 };
 
 showImage(imageElementAdventure, imagesAdventure, currentImageIndexAdventure);
-showImage(imageElementAction, imagesAction, currentImageIndexAction);
-showImage(imageElementMusical, imagesMusical, currentImageIndexMusical);
+// showImage(imageElementAction, imagesAction, currentImageIndexAction);
+// showImage(imageElementMusical, imagesMusical, currentImageIndexMusical);
 
 // ADVENTURE-SECTION
-document.getElementById("forward-arrow").addEventListener("click", () => {forwardArrow(currentImageIndexAdventure, imageElementAdventure, imagesAdventure, adventureSlider)});
-document.getElementById("back-arrow").addEventListener("click", () => {backArrow(currentImageIndexAdventure, imageElementAdventure, imagesAdventure)});
+forwardArrowAdventure.addEventListener("click", () => {forwardArrow(currentImageIndexAdventure, imageElementAdventure, imagesAdventure, adventureSlider, forwardArrowAdventure)});
+backArrowAdventure.addEventListener("click", () => {backArrow(currentImageIndexAdventure, imageElementAdventure, imagesAdventure, backArrowAdventure)});
 
 // ACTION-SECTION
-document.getElementById("forward-arrow-1").addEventListener("click", () => {forwardArrow(currentImageIndexAction, imageElementAction, imagesAction, actionSlider)});
-document.getElementById("back-arrow-1").addEventListener("click", () => {backArrow(currentImageIndexAction, imageElementAction, imagesAction)});
+// document.getElementById("forward-arrow-1").addEventListener("click", () => {forwardArrow(currentImageIndexAction, imageElementAction, imagesAction, actionSlider)});
+// document.getElementById("back-arrow-1").addEventListener("click", () => {backArrow(currentImageIndexAction, imageElementAction, imagesAction)});
 
 // MUSICAL-SECTION
-document.getElementById("forward-arrow-2").addEventListener("click", () => {forwardArrow(currentImageIndexMusical, imageElementMusical, imagesMusical, musicalSlider)});
-document.getElementById("back-arrow-2").addEventListener("click", () => {backArrow(currentImageIndexMusical, imageElementMusical, imagesMusical)});
+// document.getElementById("forward-arrow-2").addEventListener("click", () => {forwardArrow(currentImageIndexMusical, imageElementMusical, imagesMusical, musicalSlider)});
+// document.getElementById("back-arrow-2").addEventListener("click", () => {backArrow(currentImageIndexMusical, imageElementMusical, imagesMusical)});

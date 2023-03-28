@@ -165,7 +165,7 @@ body{
     right: 4%;
 }
 
-.opacity, .opacity-1, .opacity-2, .opacity-3{
+.opacity{
     opacity: 0.6;
     cursor: default;
 }
