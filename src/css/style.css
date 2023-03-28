@@ -72,7 +72,7 @@ body{
     margin: 4rem 0;
 }
 
-/* FILMES DE AVENTURA */
+/* FILMES */
 .filmes-de-aventura, .filmes-de-acao, .filme-de-musical{
     display: flex;
     gap: 1.5rem;
@@ -104,26 +104,26 @@ body{
 }
 
 /* FILMES DE MUSICAL */
-.high-school-musical-slider{
+.musical-slider{
     background: url(../images/background-movies/high-school-musical.jpg) no-repeat;
 }
 
-.high-school-musical-list .slide-hsm{
+.musical-list .slide-musical{
     position: absolute;
     opacity: 0;
     transition: 0.3s ease-in-out;
 }
 
 /* flex-direction: row */
-.adventure-list, .high-school-musical-list, .action-list, 
-.adventure-slider, .high-school-musical-slider, .action-slider{
+.adventure-list, .action-list, .musical-list, 
+.adventure-slider, .action-slider, .musical-slider{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 /* Movies-sliders */
-.adventure-slider, .high-school-musical-slider, .action-slider{
+.adventure-slider, .action-slider, .musical-slider{
     background-size: cover;
     background-position: center;
     position: relative;
@@ -133,15 +133,15 @@ body{
 }
 
 /* IMAGES */
-.slide-adventure .adventure-image, .slide-hsm .high-school-musical-image, 
-.slide-action .action-image{
+.slide-adventure .adventure-image, .slide-action .action-image, 
+.slide-musical .musical-image{
     width: 16rem;
     height: 22rem;
 }
 
 /* OPACITY: 1 */
-.adventure-list .show, .high-school-musical-list .show-2, 
-.action-list .show-1{
+.adventure-list .show, .action-list .show-1,
+.musical-list .show-2{
     opacity: 1;
 }
 
