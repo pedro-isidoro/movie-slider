@@ -39,10 +39,12 @@ let currentImageIndexMusical = 0;
 // SLIDER
 const adventureSlider = document.getElementById("adventure-slider");
 const actionSlider = document.getElementById("action-slider");
+const musicalSlider = document.getElementById("musical-slider");
 
 // IMAGES
 const imageElementAdventure = document.getElementById("image-adventure");
 const imageElementAction = document.getElementById("image-action");
+const imageElementMusical = document.getElementById("image-musical");
 
 // FUNCTIONS
 function alterarFundo(slider, currentImageIndex){
@@ -77,6 +79,7 @@ function backArrow(currentImageIndex, imageElement, images) {
 
 showImage(imageElementAdventure, imagesAdventure, currentImageIndexAdventure);
 showImage(imageElementAction, imagesAction, currentImageIndexAction);
+showImage(imageElementMusical, imagesMusical, currentImageIndexMusical);
 
 // ADVENTURE-SECTION
 document.getElementById("forward-arrow").addEventListener("click", () => {forwardArrow(currentImageIndexAdventure, imageElementAdventure, imagesAdventure, adventureSlider)});
@@ -85,3 +88,7 @@ document.getElementById("back-arrow").addEventListener("click", () => {backArrow
 // ACTION-SECTION
 document.getElementById("forward-arrow-1").addEventListener("click", () => {forwardArrow(currentImageIndexAction, imageElementAction, imagesAction, actionSlider)});
 document.getElementById("back-arrow-1").addEventListener("click", () => {backArrow(currentImageIndexAction, imageElementAction, imagesAction)});
+
+// MUSICAL-SECTION
+document.getElementById("forward-arrow-2").addEventListener("click", () => {forwardArrow(currentImageIndexMusical, imageElementMusical, imagesMusical, musicalSlider)});
+document.getElementById("back-arrow-2").addEventListener("click", () => {backArrow(currentImageIndexMusical, imageElementMusical, imagesMusical)});
