@@ -5,7 +5,7 @@ Onde estarão carrosseis com imagens de filmes, em seus respectivos gêneros.
 <br>
 
 ## Projeto
-<img src=''>
+<img src='' alt="Imagem/Gif do projeto">
 <br>
 <br>
 
