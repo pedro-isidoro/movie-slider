@@ -57,6 +57,8 @@ function alterarFundo(slider, currentImageIndex){
   if(slider === adventureSlider){
     if(currentImageIndex === 11){
       adventureSlider.style.backgroundImage = "url(./src/images/background-movies/hobbit.jpg)"
+    }else{
+      return;
     };
   };
 };
@@ -85,7 +87,7 @@ function showHideBackArrow(currentImageIndex, backArrow){
   };
 };
 
-function forwardArrow(currentImageIndex, imageElement, images, slider, forwardArrow) {
+function forwardArrow(currentImageIndex, images, imageElement, slider, forwardArrow) {
   console.log(currentImageIndex)
   if(currentImageIndex === images.length - 1){
     return;
@@ -99,7 +101,7 @@ function forwardArrow(currentImageIndex, imageElement, images, slider, forwardAr
   showHideForwardArrow(images, currentImageIndex, forwardArrow);
 };
 
-function backArrow(currentImageIndex, imageElement, images, backArrow) {
+function backArrow(currentImageIndex, images, imageElement, backArrow) {
   console.log(currentImageIndex)
   if(currentImageIndex === 0){
     return;
@@ -116,8 +118,8 @@ showImage(imageElementAdventure, imagesAdventure, currentImageIndexAdventure);
 // showImage(imageElementMusical, imagesMusical, currentImageIndexMusical);
 
 // ADVENTURE-SECTION
-forwardArrowAdventure.addEventListener("click", () => {forwardArrow(currentImageIndexAdventure, imageElementAdventure, imagesAdventure, adventureSlider, forwardArrowAdventure)});
-backArrowAdventure.addEventListener("click", () => {backArrow(currentImageIndexAdventure, imageElementAdventure, imagesAdventure, backArrowAdventure)});
+forwardArrowAdventure.addEventListener("click", () => {forwardArrow(currentImageIndexAdventure, imagesAdventure, imageElementAdventure, adventureSlider, forwardArrowAdventure)});
+backArrowAdventure.addEventListener("click", () => {backArrow(currentImageIndexAdventure, imagesAdventure,imageElementAdventure, backArrowAdventure)});
 
 // ACTION-SECTION
 // document.getElementById("forward-arrow-1").addEventListener("click", () => {forwardArrow(currentImageIndexAction, imageElementAction, imagesAction, actionSlider)});
