@@ -18,18 +18,18 @@ const imagesAdventure = [
   "./src/images/movies/o-senhor-dos-aneis-3.jpg",
 ];
 
-const imagesAction = [
-  "./src/images/movies/transformers-1.jpg",
-  "./src/images/movies/transformers-2.jpg",
-  "./src/images/movies/transformers-3.jpg",
+// const imagesAction = [
+//   "./src/images/movies/transformers-1.jpg",
+//   "./src/images/movies/transformers-2.jpg",
+//   "./src/images/movies/transformers-3.jpg",
   
-];
+// ];
 
-const imagesMusical = [
-  "./src/images/movies/high-school-musical-I.jpg",
-  "./src/images/movies/high-school-musical-II.jpg",
-  "./src/images/movies/high-school-musical-III.jpg",
-]
+// const imagesMusical = [
+//   "./src/images/movies/high-school-musical-I.jpg",
+//   "./src/images/movies/high-school-musical-II.jpg",
+//   "./src/images/movies/high-school-musical-III.jpg",
+// ]
 
 // INDEX
 let currentImageIndexAdventure = 0;
@@ -93,6 +93,7 @@ function forwardArrow(currentImageIndex, imageElement, images, slider, forwardAr
 
   currentImageIndex = (currentImageIndex + 1) % images.length;
   console.log(currentImageIndex)
+
   showImage(imageElement, images, currentImageIndex);
   alterarFundo(slider, currentImageIndex);
   showHideForwardArrow(images, currentImageIndex, forwardArrow);
@@ -105,6 +106,7 @@ function backArrow(currentImageIndex, imageElement, images, backArrow) {
   };
   currentImageIndex = (currentImageIndex + images.length - 1) % images;
   console.log(currentImageIndex)
+  
   showImage(imageElement, images, currentImageIndex);
   showHideBackArrow(currentImageIndex, backArrow);
 };
