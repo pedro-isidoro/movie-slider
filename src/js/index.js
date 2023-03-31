@@ -38,9 +38,13 @@ let currentImageIndexAdventure = 0;
 
 // ADVENTURE-ARROW
 const forwardArrowAdventure = document.getElementById("forward-arrow");
+// const forwardArrowAction = document.getElementById("forward-arrow-1");
+// const forwardArrowMusical = document.getElementById("forward-arrow-2");
 
 // BACK-ARROW
 const backArrowAdventure = document.getElementById("back-arrow");
+// const backArrowAction = document.getElementById("back-arrow-1");
+// const backArrowMusical = document.getElementById("back-arrow-2");
 
 // SLIDER
 const adventureSlider = document.getElementById("adventure-slider");
@@ -70,6 +74,7 @@ function showImage(imageElement, images, currentImageIndex) {
 function showHideForwardArrow(images, currentImageIndex, forwardArrow){
   const EhAUltimaImagem = currentImageIndex !== 0 && currentImageIndex === images.length - 1;
   console.log(EhAUltimaImagem)
+
   if(EhAUltimaImagem){
     forwardArrow.classList.add("opacity");
   }else{
@@ -80,6 +85,7 @@ function showHideForwardArrow(images, currentImageIndex, forwardArrow){
 function showHideBackArrow(currentImageIndex, backArrow){
   const naoEhAPrimeiraImagem = currentImageIndex !== 0;
   console.log(naoEhAPrimeiraImagem)
+
   if(naoEhAPrimeiraImagem){
     backArrow.classList.remove("opacity");
   }else{
