@@ -33,8 +33,8 @@ const imagesMusical = [
 
 // INDEX
 let currentImageIndexAdventure = 0;
-let currentImageIndexAction = 0;
-let currentImageIndexMusical = 0;
+// let currentImageIndexAction = 0;
+// let currentImageIndexMusical = 0;
 
 // ADVENTURE-ARROW
 const forwardArrowAdventure = document.getElementById("forward-arrow");
@@ -67,6 +67,7 @@ function showImage(imageElement, images, currentImageIndex) {
 
 function showHideForwardArrow(images, currentImageIndex, forwardArrow){
   const EhAUltimaImagem = currentImageIndex !== 0 && currentImageIndex === images.length - 1;
+  console.log(EhAUltimaImagem)
   if(EhAUltimaImagem){
     forwardArrow.classList.add("opacity");
   }else{
@@ -76,6 +77,7 @@ function showHideForwardArrow(images, currentImageIndex, forwardArrow){
 
 function showHideBackArrow(currentImageIndex, backArrow){
   const naoEhAPrimeiraImagem = currentImageIndex !== 0;
+  console.log(naoEhAPrimeiraImagem)
   if(naoEhAPrimeiraImagem){
     backArrow.classList.remove("opacity");
   }else{
@@ -84,21 +86,25 @@ function showHideBackArrow(currentImageIndex, backArrow){
 };
 
 function forwardArrow(currentImageIndex, imageElement, images, slider, forwardArrow) {
+  console.log(currentImageIndex)
   if(currentImageIndex === images.length - 1){
     return;
   };
 
   currentImageIndex = (currentImageIndex + 1) % images.length;
+  console.log(currentImageIndex)
   showImage(imageElement, images, currentImageIndex);
   alterarFundo(slider, currentImageIndex);
   showHideForwardArrow(images, currentImageIndex, forwardArrow);
 };
 
 function backArrow(currentImageIndex, imageElement, images, backArrow) {
+  console.log(currentImageIndex)
   if(currentImageIndex === 0){
     return;
   };
   currentImageIndex = (currentImageIndex + images.length - 1) % images;
+  console.log(currentImageIndex)
   showImage(imageElement, images, currentImageIndex);
   showHideBackArrow(currentImageIndex, backArrow);
 };
@@ -117,4 +123,4 @@ backArrowAdventure.addEventListener("click", () => {backArrow(currentImageIndexA
 
 // MUSICAL-SECTION
 // document.getElementById("forward-arrow-2").addEventListener("click", () => {forwardArrow(currentImageIndexMusical, imageElementMusical, imagesMusical, musicalSlider)});
-// document.getElementById("back-arrow-2").addEventListener("click", () => {backArrow(currentImageIndexMusical, imageElementMusical, imagesMusical)});
+// document.getElementById("back-arrow-2").addEventListener("click", () => {backArrow(currentImageIndexMusical, imageElementMusical, imag
