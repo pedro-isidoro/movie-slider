@@ -1,6 +1,8 @@
 # Projeto: Movie Slider
 Uma landing page se espelhando em um modelo de streaming.
+<br>
 Onde estarão carrosseis com imagens de filmes, em seus respectivos gêneros.
+<br>
 A príncipio seriam apenas de 2 filmes ou 3 no máximo, mas como fui pegando gosto ânimo para como o projeto poderia ficar, acabei decidindo por adicionar ais. 
 <br>
 <br>
@@ -20,7 +22,6 @@ Além de fazer esse site ser responsivo.
 - HTML
 - CSS
 - JS
-<br>
 <br>
 
 ## Métodos
