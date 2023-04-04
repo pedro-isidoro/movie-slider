@@ -1,11 +1,14 @@
 # Projeto: Movie Slider
 Uma landing page se espelhando em um modelo de streaming.
+<br>
 Onde estarão carrosseis com imagens de filmes, em seus respectivos gêneros.
+<br>
+A príncipio seriam apenas de 2 filmes ou 3 no máximo, mas como fui pegando gosto ânimo para como o projeto poderia ficar, acabei decidindo por adicionar ais. 
 <br>
 <br>
 
 ## Projeto
-<img src=''>
+<img src='' alt="Imagem/Gif do projeto">
 <br>
 <br>
 
@@ -20,10 +23,9 @@ Além de fazer esse site ser responsivo.
 - CSS
 - JS
 <br>
-<br>
 
 ## Métodos
-Foi usado display grip juntamente com display flex, para melhor agrupamento e controle das seções da Landing Page e suas tags.
+Foi usado display grid juntamente com display flex para melhor agrupamento e controle das seções da Landing Page e suas tags, além de uma melhor facilidade na hora de suas centralizações.
 <br>
 <br>
 
