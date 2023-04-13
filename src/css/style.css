@@ -92,8 +92,7 @@ body{
 }
 
 /* ACAO */
-.action-slider{
-    /* grid-area: transformers; */
+/* .action-slider{
     background: url(../images/background-movies/transformers-1.jpg) no-repeat;
 }
 
@@ -101,10 +100,10 @@ body{
     position: absolute;
     opacity: 0;
     transition: 0.3s ease-in-out;
-}
+} */
 
 /* FILMES DE MUSICAL */
-.musical-slider{
+/* .musical-slider{
     background: url(../images/background-movies/high-school-musical.jpg) no-repeat;
 }
 
@@ -112,7 +111,7 @@ body{
     position: absolute;
     opacity: 0;
     transition: 0.3s ease-in-out;
-}
+} */
 
 /* flex-direction: row */
 .adventure-list, .action-list, .musical-list, 
