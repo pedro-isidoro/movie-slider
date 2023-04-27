@@ -1,4 +1,4 @@
-import { showMovieImage, hideForwardArrow, hideBackArrow, changeBackgroundImage } from './functions.js'
+import { showMovieImage, hideForwardArrow, hideBackArrow, changeBackgroundFutureImage, changeBackgroundPastImage} from './functions.js'
 
 // MOVIES IMAGE ARRAY
 const adventuresMoviesImages = [
@@ -48,7 +48,7 @@ adventureBackArrow.addEventListener('click', () => {
   showMovieImage(adventureImg, adventuresMoviesImages, adventureMoviesImagesIndex);
   hideForwardArrow(adventureMoviesImagesIndex, adventuresMoviesImages, adventureForwardArrow);
   hideBackArrow(adventureMoviesImagesIndex, adventureBackArrow);
-  changeBackgroundImage(adventureSlider);
+  changeBackgroundPastImage(adventureMoviesImagesIndex, adventureSlider);
 });
 
 adventureForwardArrow.addEventListener('click', () => {
@@ -62,7 +62,7 @@ adventureForwardArrow.addEventListener('click', () => {
   showMovieImage(adventureImg, adventuresMoviesImages, adventureMoviesImagesIndex);
   hideForwardArrow(adventureMoviesImagesIndex, adventuresMoviesImages, adventureForwardArrow);
   hideBackArrow(adventureMoviesImagesIndex, adventureBackArrow);
-  changeBackgroundImage(adventureSlider);
+  changeBackgroundFutureImage(adventureMoviesImagesIndex, adventureSlider);
 });
 
 showMovieImage(adventureImg, adventuresMoviesImages, adventureMoviesImagesIndex);
