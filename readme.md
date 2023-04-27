@@ -5,6 +5,8 @@ Onde estarão carrosseis com imagens de filmes, em seus respectivos gêneros.
 <br>
 A príncipio seriam apenas de 2 filmes ou 3 no máximo, mas como fui pegando gosto ânimo para como o projeto poderia ficar, acabei decidindo por adicionar ais. 
 <br>
+Abandonei esse projeto pois tinha travado nele, porém o refiz do 0. E o salvei aqui no GitHub como Pedroflix. E só voltei para este para não deixar ele como um erro, mas como uma lembrança de que sempre quando queremos e se nos esforçarmos um pouco mais, sempre conseguimos alcançar o que queremos.
+<br>
 <br>
 
 ## Projeto
